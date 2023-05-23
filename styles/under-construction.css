@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #45689e;
+  --secondary-color: #096bb2;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.board {
+  --deg: 5deg;
+  font-size: 3rem;
+  padding: 0.5em 1em;
+  background: var(--secondary-color);
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%) rotate(calc(-1 * var(--deg)));
+}
+
+@media screen and (min-width: 480px) {
+  .board {
+    font-size: 4rem;
+  }
+}
+
+.board h1 {
+  margin: 0;
+  font-size: inherit;
+}
+
+.board h1:before {
+  left: 24px;
+}
+
+.board h1:after {
+  right: 24px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
