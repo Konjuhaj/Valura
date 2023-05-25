@@ -1,26 +1,38 @@
+if (sessionStorage.getItem("state") === null) {
+  sessionStorage.setItem("state", "finnish");
+}
+
 const toggle = document.querySelector(".check-toggle");
 const english = document.querySelectorAll(".en");
 const finnish = document.querySelectorAll(".fin");
 
-console.log(toggle);
 toggle.addEventListener("click", (e) => {
   console.log("clicked");
   if (e.target.checked) {
-    finnish.forEach((finn) => {
-      finn.classList.add("hidden");
-    });
-    english.forEach((eng) => {
-      eng.classList.remove("hidden");
-    });
+    toggleLangguage(english, finnish);
+    sessionStorage.setItem("state", "english");
   } else {
-    finnish.forEach((finn) => {
-      finn.classList.remove("hidden");
-    });
-    english.forEach((eng) => {
-      eng.classList.add("hidden");
-    });
+    toggleLangguage(finnish, english);
+    sessionStorage.setItem("state", "finnish");
   }
 });
+
+function toggleLangguage(newLan, oldLan) {
+  newLan.forEach((lan) => {
+    lan.classList.remove("hidden");
+  });
+  oldLan.forEach((lan) => {
+    lan.classList.add("hidden");
+  });
+}
+
+console.log("loaded");
+console.log(sessionStorage.getItem("state"));
+if (sessionStorage.getItem("state") === "english") {
+  console.log("current state is english");
+  toggleLangguage(english, finnish);
+  toggle.checked = true;
+}
 
 const availableCert = document.querySelector("#available");
 availableCert.addEventListener("click", (e) => {
