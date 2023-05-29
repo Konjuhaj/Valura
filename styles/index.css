@@ -13,12 +13,14 @@ div > p.fin {
 }
 
 body {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "header" "main" "footer";
 
   background-color: #f2f2f2;
+  min-height: 100vh;
 }
 
 header {
@@ -62,9 +64,10 @@ nav ul li a {
 
 main {
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
 
   grid-area: main;
+  padding-bottom: 10%;
 }
 
 .wrapper {
@@ -159,7 +162,7 @@ main {
   text-align: center;
   padding: 20px;
 
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 800;
   color: white;
   text-align: right;
@@ -176,6 +179,9 @@ main {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   background-color: #096bb2;
   padding: 1rem 2rem;
