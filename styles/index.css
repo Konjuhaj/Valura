@@ -67,7 +67,7 @@ main {
   min-height: 90vh;
 
   grid-area: main;
-  padding-bottom: 10%;
+  padding-bottom: clamp(100px, 10vw, 150px);
 }
 
 .wrapper {
@@ -104,15 +104,15 @@ main {
 .product-hero {
   width: 100%;
   height: 100vh;
-  max-height: 500px;
+  max-height: 70vw;
 
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("../img/product.png");
-  background-size: cover;
+  background-size: contain;
+  object-fit: scale-down;
   background-repeat: no-repeat;
   background-position: left;
 
