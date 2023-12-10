@@ -36,7 +36,7 @@ if (sessionStorage.getItem("state") === "english") {
 
 const availableCert = document.querySelector("#available");
 availableCert.addEventListener("click", (e) => {
-  availableCert.innerHTML = "Sertificate available upon order request";
+  availableCert.innerHTML = "Certificate available upon order request";
 });
 
 const availableCert2 = document.querySelector("#saatavilla");

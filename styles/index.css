@@ -227,7 +227,9 @@ h2 {
   font-size: 2rem;
   font-weight: 600;
   color: #096bb2;
-  line-height: 1.3rem;
+  line-height: 2rem;
+
+  text-align: center;
 }
 
 .hidden {
